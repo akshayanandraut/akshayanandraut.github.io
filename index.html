@@ -1,7 +1,29 @@
 <html>	
 <head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">	</script>	
+   <link rel="icon" type="image/gif" href="favicon.gif" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">	</script>
+<script>
+$(window).ready(function() {
+	
+	$('.body').hide();
+	setTimeout(function(){
+$('#loading').hide();
+	$('.body').show().animate({opacity:1}, 1000 );
+},2000);
+	
+});
+</script>	
 <style type="text/css">
+#loading {
+    position: absolute; 
+	width: 99%; 
+	height: 98%; 
+	background: url('preLoader.gif') no-repeat center center;
+}
+.body{
+opacity:0;
+}
 .inputText, .inputPass
 {
 	height:30px;
@@ -47,7 +69,9 @@
 </style>
 </head>
 <body>
-<div><br><br>
+<div id="loading"></div>
+
+<div class="body"><br><br>
 <input type="text" class="inputText"/><span class="username">Your email here</span>
 <br><br><br>
 <input type="password" class="inputPass" /><span class="password">Your password here</span>
