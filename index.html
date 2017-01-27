@@ -11,25 +11,20 @@
   <script src='nprogress.js'></script>
 <link rel='stylesheet' href='nprogress.css'/>
 <script>
-NProgress.start();
-$('#loading').show();	
+	
 </script>
   <script>
 $(window).ready(function() {	
+	NProgress.start();
+	$('#loading').show();
 	$('.body').hide();	
 });
-
-
-
-
-
 </script>	
   <style>
   #loading {
     position: absolute; 
 	width: 99%; 
-	height: 98%; 
-	
+	height: 98%; 	
 	background: url('preLoader.gif') no-repeat center center;
 }
 
@@ -146,11 +141,12 @@ opacity:0;
 </div>
 
 <script>
-$(window).ready(function() {	
+$(document).ready(function() {	
+	
 	$('#loading').hide();
-	$('.body').show().animate({opacity:1}, 1000 );
-});
+	$('.body').show().animate({opacity:1}, 800);
 NProgress.done();
+});
 </script>
 </body>
 </html>
