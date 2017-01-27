@@ -18,271 +18,144 @@
 <script src="//code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.13/js/dataTables.bootstrap.min.js"></script>
-
-
 <link rel='stylesheet' href='nprogress.css'/>
-<script>
-	
-</script>
-  <script>
-$(document).ready(function() {	
-	NProgress.start();
-	$('#loading').show();
-	$('.body').hide();	
-	$('.olcoder').hide();	
-	
-});
-$(window).on('load',function() {	
-	
-	$('#loading').hide();
-	$('.body').show().animate({opacity:1}, 1000);
-	NProgress.done();
-});
-
-$(window).scroll(function() {
-  if ($(document).scrollTop() > 50) {
-    $('nav').addClass('shrink');
-  } else {
-    $('nav').removeClass('shrink');
-  }
-});
-$(document).ready(function() {
-    $('#projects_table').DataTable();
-} );
-
-$(document).ready(function(){
-	$('#olcoder').click(function(){	
-	//$('#myModal').modal().hide();
-	$("#myModal .close").click();
-			$('.body1').hide("slow");
-			$('.nav').hide("slow");
-			$('.olcoder').show("slow");
-	});
-});
-
-$(document).ready(function(){
-	$('.navbar-brand').click(function(){	
-		$('.olcoder').hide("slow");		
-		$('.body1').show("slow");	
-		$('.nav').show("slow");
-			
-	});
-});
-</script>	
-  <style>
-  #loading {
-    position: absolute; 
-	width: 99%; 
-	height: 98%; 	
-	background: url('preLoader.gif') no-repeat center center;
-}
-
-.body{
-opacity:0;
-}
-.navbar-brand:hover{
-cursor:pointer;
-}
-  body {
-      font: 20px Montserrat, sans-serif;
-      line-height: 1.5;
-      color: #f5f6f7;
-  }
-  p {font-size: 16px;}
-  .margin {margin-bottom: 45px;}
-  .bg-1 { 
-      background-color: #1abc9c; /* Green */
-      color: #ffffff;
-  }
-  .bg-2 { 
-      background-color: #474e5d; /* Dark Blue */
-      color: #ffffff;
-  }
-  .bg-3 { 
-      background-color: #ffffff; /* White */
-      color: #555555;
-  }
-  .bg-4 { 
-      background-color: #2f2f2f; /* Black Gray */
-      color: #fff;
-  }
-  .container-fluid {
-      padding-top: 70px;
-      padding-bottom: 70px;
-  }
-  .navbar {
-      padding-top: 10px;
-      padding-bottom: 10px;
-      border: 0;
-      border-radius: 0;
-      margin-bottom: 0;
-      font-size: 12px;
-      letter-spacing: 5px;
-	  opacity:0.95;
-	  
-  }
-  .navbar-nav  li a:hover {
-      color: #1abc9c !important;
-	  
-  }
-  .navbar-nav  li a{
-	opacity:0.8;
-	margin-right:20px; 
-  }
+<link rel='stylesheet' href='css_req.css'/>
+<script src="js_req.js"></script> 
+ 
   
-
-
-nav.shrink {
-  min-height: 12px;
-}
-nav{
-
-   // Animation
-   -webkit-transition: all 0.4s ease;
-   transition: all 0.4s ease;
-}
-.glyphicon-white
-{
-color:white;
-}
-.table, tr
-{
-color:black;
-}
-.proj-list{
-text-decoration: none;
-cursor:pointer;
-}
-.body1{
- font: 20px Montserrat, sans-serif;
-      line-height: 1.5;
-      color: #f5f6f7;
-}
-  </style>
 </head>
 <body>
 <div id="loading"></div>
 
 <div class="body">
-<!-- Navbar -->
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand">Me</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#whoAmI" class="glyphicon glyphicon-king">WHO</a></li>
-        <li><a href="#whatAmI" class="	glyphicon glyphicon-question-sign glyphicon-white">WHAT</a></li>
-        <li><a href="#whereAmI" class="glyphicon glyphicon-globe">WHERE</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-<div class="body1">
-<!-- First Container -->
-<div id="whoAmI" class="container-fluid bg-1 text-center">
-  <h3 class="margin">Who Am I?</h3>
-  <img src="me1.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
-  <h3>I'm an Engineering enthusiast </h3>
-</div>
+	<!-- Navbar -->
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	  <div class="container">
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>                        
+		  </button>
+		  <a class="navbar-brand">Me</a>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+		  <ul class="nav navbar-nav navbar-right">
+			<li><a href="#whoAmI" class="glyphicon glyphicon-king">WHO</a></li>
+			<li><a href="#whatAmI" class="	glyphicon glyphicon-question-sign glyphicon-white">WHAT</a></li>
+			<li><a href="#whereAmI" class="glyphicon glyphicon-globe">WHERE</a></li>
+		  </ul>
+		</div>
+	  </div>
+	</nav>
+	<div class="body1">
+	<!-- First Container -->
+	<div id="whoAmI" class="container-fluid bg-1 text-center">
+	  <h3 class="margin">Who Am I?</h3>
+	  <img src="me1.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
+	  <h3>I'm an Engineering enthusiast </h3>
+	</div>
 
-<!-- Second Container -->
-<div id="whatAmI" class="container-fluid bg-2 text-center">
-  <h3 class="margin">What Am I?</h3>
-  <p>I am an engineering student pursuing my Bachelor Of Engineering degree at Sardar Patel Institute of Technology.  </p>
-  <p>I love working with UI/UX design. I have done many projects and will keep doing some many interesting stuffs whole my life. <br><br>Check out some of my works by clicking the button below.</p>
-  
-  
-  <!-- Trigger the modal with a button -->
-<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-briefcase"></span> My Work</button>
+	<!-- Second Container -->
+	<div id="whatAmI" class="container-fluid bg-2 text-center">
+	  <h3 class="margin">What Am I?</h3>
+	  <p>I am an engineering student pursuing my Bachelor Of Engineering degree at Sardar Patel Institute of Technology.  </p>
+	  <p>I love working with UI/UX design. I have done many projects and will keep doing some many interesting stuffs whole my life. <br><br>Check out some of my works by clicking the button below.</p>
+	  
+	  
+	  <!-- Trigger the modal with a button -->
+	<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-briefcase"></span> My Work</button>
 
-<!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
+	<!-- Modal -->
+	<div id="myModal" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
 
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title" style="color:black;">My Projects</h4>
-      </div>
-      <div class="modal-body">
-        <table class="table table-hover" id="projects_table">
-		<thead>
-			<tr><th>Project name</th></tr>
-		</thead>
-		<tbody class="text-left">
-		<tr id="olcoder"><td >OLCoder</td></tr>
+		<!-- Modal content-->
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal">&times;</button>
+			<h4 class="modal-title" style="color:black;">My Projects</h4>
+		  </div>
+		  <div class="modal-body">
+			<table class="table table-hover" id="projects_table">
+			<thead>
+				<tr><th>Project name</th></tr>
+			</thead>
+			<tbody class="text-left">
+			<tr id="olcoder"><td >OLCoder</td></tr>
+			
+			</tbody>
+			</table>
+		  </div>
+		  
+		</div>
+
+	  </div>
+	</div>
+	</div>
+
+	<!-- Third Container (Grid) -->
+	<div id="whereAmI" class="container-fluid bg-3 text-center">    
+	  <h3 class="margin">Where To Find Me?</h3><br>
+	  <div class="row">
+		<div class="col-lg-2">
+		   <a class="btn btn-social btn-twitter">
+				<span class="fa fa-twitter"></span>Twitter
+			</a>      
+		</div>
+		<div class="col-lg-2">
+		   <a class="btn btn-social btn-facebook">
+				<span class="fa fa-facebook"></span>Facebook
+			</a>      
+		</div>
+		<div class="col-lg-2">
+		   <a class="btn btn-social btn-pinterest">
+				<span class="fa fa-google-plus"></span>+Google
+			</a>      
+		</div>
+		<div class="col-lg-2">
+		   <a class="btn btn-social btn-instagram">
+				<span class="fa fa-instagram"></span>Instagram
+			</a>      
+		</div>
+		<div class="col-lg-2">
+		   <a class="btn btn-social  btn-github">
+				<span class="fa fa-github"></span>GitHub
+			</a>      
+		</div>
+		<div class="col-lg-2">
+		   <a class="btn btn-social  btn-pinterest">
+				<span class="fa fa-pinterest"></span>Pinterest
+			</a>      
+		</div>
 		
-		</tbody>
-		</table>
-      </div>
-      
-    </div>
+	  </div>
+	</div>
+	</div>
+	<div class="olcoder">
 
-  </div>
-</div>
-</div>
+		<div id="olcoder_work_area" class="container-fluid bg-2 text-center">
+				  <h3 class="margin">OLCoder</h3>
+				  <div class="col-lg-2 col-lg-offset-8">
+					   <a class="btn btn-social  btn-github" href="#">
+							<span class="fa fa-github"></span>View code on GitHub
+						</a>      
+					</div>
+			<div class="container">
 
-<!-- Third Container (Grid) -->
-<div id="whereAmI" class="container-fluid bg-3 text-center">    
-  <h3 class="margin">Where To Find Me?</h3><br>
-  <div class="row">
-    <div class="col-lg-2">
-       <a class="btn btn-social btn-twitter">
-			<span class="fa fa-twitter"></span>Twitter
-		</a>      
-    </div>
-	<div class="col-lg-2">
-       <a class="btn btn-social btn-facebook">
-			<span class="fa fa-facebook"></span>Facebook
-		</a>      
-    </div>
-	<div class="col-lg-2">
-       <a class="btn btn-social btn-pinterest">
-			<span class="fa fa-google-plus"></span>+Google
-		</a>      
-    </div>
-	<div class="col-lg-2">
-       <a class="btn btn-social btn-instagram">
-			<span class="fa fa-instagram"></span>Instagram
-		</a>      
-    </div>
-	<div class="col-lg-2">
-       <a class="btn btn-social  btn-github">
-			<span class="fa fa-github"></span>GitHub
-		</a>      
-    </div>
-	<div class="col-lg-2">
-       <a class="btn btn-social  btn-pinterest">
-			<span class="fa fa-pinterest"></span>Pinterest
-		</a>      
-    </div>
-    
-  </div>
-</div>
-</div>
-<div class="olcoder">
-
-<div id="olcoder_work_area" class="container-fluid bg-2 text-center">
-  <h3 class="margin">OLCoder</h3>
-  <div class="col-lg-2 col-lg-offset-8">
-       <a class="btn btn-social  btn-github" href="#">
-			<span class="fa fa-github"></span>View code on GitHub
-		</a>      
-    </div>
-  
-</div>
-</div>
+						
+						
+						
+						
+						
+						
+			</div>			
+		</div>
+	</div>
+	
 <!-- Footer -->
 <footer class="container-fluid bg-4 text-center">
-  <div class="pull-left">Copyright <i class="glyphicon glyphicon-copyright-mark"></i>2017 Akshayanand Raut </div>
+	 <div class="pull-left">Copyright <i class="glyphicon glyphicon-copyright-mark"></i>2017 Akshayanand Raut </div>
 </footer>
 </div>
 

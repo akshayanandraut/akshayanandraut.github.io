@@ -1,0 +1,91 @@
+ #loading {
+    position: absolute; 
+	width: 99%; 
+	height: 98%; 	
+	background: url('preLoader.gif') no-repeat center center;
+}
+
+.body{
+opacity:0;
+}
+.navbar-brand:hover{
+cursor:pointer;
+}
+  body {
+      font: 20px Montserrat, sans-serif;
+      line-height: 1.5;
+      color: #f5f6f7;
+  }
+  p {font-size: 16px;}
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+      background-color: #1abc9c; /* Green */
+      color: #ffffff;
+  }
+  .bg-2 { 
+      background-color: #474e5d; /* Dark Blue */
+      color: #ffffff;
+  }
+  .bg-3 { 
+      background-color: #ffffff; /* White */
+      color: #555555;
+  }
+  .bg-4 { 
+      background-color: #2f2f2f; /* Black Gray */
+      color: #fff;
+  }
+  .container-fluid {
+      padding-top: 70px;
+      padding-bottom: 70px;
+  }
+  .navbar {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 5px;
+	  opacity:0.95;
+	  
+  }
+  .navbar-nav  li a:hover {
+      color: #1abc9c !important;
+	  
+  }
+  .navbar-nav  li a{
+	opacity:0.8;
+	margin-right:20px; 
+  }
+  
+
+
+nav.shrink {
+  min-height: 12px;
+}
+nav{
+
+   // Animation
+   -webkit-transition: all 0.4s ease;
+   transition: all 0.4s ease;
+}
+.glyphicon-white
+{
+color:white;
+}
+.table, tr
+{
+color:black;
+}
+.proj-list{
+text-decoration: none;
+cursor:pointer;
+}
+.body1{
+ font: 20px Montserrat, sans-serif;
+      line-height: 1.5;
+      color: #f5f6f7;
+}
+.olcoder{
+color:black;
+}
