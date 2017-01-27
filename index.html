@@ -19,6 +19,12 @@ $(window).ready(function() {
 	$('#loading').show();
 	$('.body').hide();	
 });
+$(window).on('load',function() {	
+	
+	$('#loading').hide();
+	$('.body').show().animate({opacity:1000}, 500);
+	NProgress.done();
+});
 </script>	
   <style>
   #loading {
@@ -141,12 +147,7 @@ opacity:0;
 </div>
 
 <script>
-$(document).ready(function() {	
-	
-	$('#loading').hide();
-	$('.body').show().animate({opacity:1}, 800);
-NProgress.done();
-});
+
 </script>
 </body>
 </html>
