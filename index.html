@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>  
-  <title>Akshayanand Raut</title>
+  <title class="img img-responsive img-circle">Akshayanand Raut</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -62,8 +62,7 @@ $(document).ready(function(){
 
 $(document).ready(function(){
 	$('.navbar-brand').click(function(){	
-		$('.olcoder').hide("slow");
-		
+		$('.olcoder').hide("slow");		
 		$('.body1').show("slow");	
 			
 	});
@@ -267,15 +266,19 @@ cursor:pointer;
 </div>
 <div class="olcoder">
 
-<div id="olcoder_work_area" class="container-fluid bg-1 text-center">
+<div id="olcoder_work_area" class="container-fluid bg-2 text-center">
   <h3 class="margin">OLCoder</h3>
-  <img src="me1.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
-  <h3>I'm an Engineering enthusiast </h3>
+  <div class="col-lg-2 col-lg-offset-8">
+       <a class="btn btn-social  btn-github" href="#">
+			<span class="fa fa-github"></span>View code on GitHub
+		</a>      
+    </div>
+  
 </div>
 </div>
 <!-- Footer -->
 <footer class="container-fluid bg-4 text-center">
-  <div class="pull-left"><i class="glyphicon glyphicon-copyright-mark"></i>Copyright Akshayanand Raut </div>
+  <div class="pull-left">Copyright <i class="glyphicon glyphicon-copyright-mark"></i>2017 Akshayanand Raut </div>
 </footer>
 </div>
 
