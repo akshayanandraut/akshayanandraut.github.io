@@ -9,12 +9,15 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src='nprogress.js'></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="bootstrap_social/bootstrap-social.css">
+
 <link rel='stylesheet' href='nprogress.css'/>
 <script>
 	
 </script>
   <script>
-$(window).ready(function() {	
+$(document).ready(function() {	
 	NProgress.start();
 	$('#loading').show();
 	$('.body').hide();	
@@ -25,6 +28,14 @@ $(window).on('load',function() {
 	$('#loading').hide();
 	$('.body').show().animate({opacity:1}, 1000);
 	NProgress.done();
+});
+
+$(window).scroll(function() {
+  if ($(document).scrollTop() > 50) {
+    $('nav').addClass('shrink');
+  } else {
+    $('nav').removeClass('shrink');
+  }
 });
 </script>	
   <style>
@@ -40,7 +51,7 @@ opacity:0;
 }
   body {
       font: 20px Montserrat, sans-serif;
-      line-height: 1.8;
+      line-height: 1.5;
       color: #f5f6f7;
   }
   p {font-size: 16px;}
@@ -66,19 +77,41 @@ opacity:0;
       padding-bottom: 70px;
   }
   .navbar {
-      padding-top: 15px;
-      padding-bottom: 15px;
+      padding-top: 10px;
+      padding-bottom: 10px;
       border: 0;
       border-radius: 0;
       margin-bottom: 0;
       font-size: 12px;
       letter-spacing: 5px;
+	  opacity:0.95;
+	  
   }
   .navbar-nav  li a:hover {
       color: #1abc9c !important;
+	  
+  }
+  .navbar-nav  li a{
+	opacity:0.8;
+	margin-right:20px; 
   }
   
-  
+
+
+nav.shrink {
+  min-height: 12px;
+}
+nav{
+
+   // Animation
+   -webkit-transition: all 0.4s ease;
+   transition: all 0.4s ease;
+}
+.glyphicon-white
+{
+color:white;
+}
+
   </style>
 </head>
 <body>
@@ -86,7 +119,7 @@ opacity:0;
 
 <div class="body">
 <!-- Navbar -->
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -98,9 +131,9 @@ opacity:0;
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#whoAmI">WHO</a></li>
-        <li><a href="#whatAmI">WHAT</a></li>
-        <li><a href="#whereAmI">WHERE</a></li>
+        <li><a href="#whoAmI" class="glyphicon glyphicon-king">WHO</a></li>
+        <li><a href="#whatAmI" class="	glyphicon glyphicon-question-sign glyphicon-white">WHAT</a></li>
+        <li><a href="#whereAmI" class="glyphicon glyphicon-globe">WHERE</a></li>
       </ul>
     </div>
   </div>
@@ -109,41 +142,82 @@ opacity:0;
 <!-- First Container -->
 <div id="whoAmI" class="container-fluid bg-1 text-center">
   <h3 class="margin">Who Am I?</h3>
-  <img src="bird.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
-  <h3>I'm an Engineer</h3>
+  <img src="me1.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
+  <h3>I'm an Engineering enthusiast </h3>
 </div>
 
 <!-- Second Container -->
 <div id="whatAmI" class="container-fluid bg-2 text-center">
   <h3 class="margin">What Am I?</h3>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-  <a href="#" class="btn btn-default btn-lg">
-    <span class="glyphicon glyphicon-search"></span> Search
-  </a>
+  <p>I am an engineering student pursuing my Bachelor Of Engineering degree at Sardar Patel Institute of Technology.  </p>
+  <p>I love working with UI/UX design. I have done many projects and will keep doing some many interesting stuffs whole my life. <br><br>Check out some of my works by clicking the button below.</p>
+  
+  
+  <!-- Trigger the modal with a button -->
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-briefcase"></span> My Work</button>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">My Projects</h4>
+      </div>
+      <div class="modal-body">
+        <table class>
+		</table>
+      </div>
+      
+    </div>
+
+  </div>
+</div>
 </div>
 
 <!-- Third Container (Grid) -->
 <div id="whereAmI" class="container-fluid bg-3 text-center">    
   <h3 class="margin">Where To Find Me?</h3><br>
   <div class="row">
-    <div class="col-sm-4">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <img src="birds1.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+    <div class="col-lg-2">
+       <a class="btn btn-social btn-twitter">
+			<span class="fa fa-twitter"></span>Twitter
+		</a>      
     </div>
-    <div class="col-sm-4"> 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <img src="birds2.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+	<div class="col-lg-2">
+       <a class="btn btn-social btn-facebook">
+			<span class="fa fa-facebook"></span>Facebook
+		</a>      
     </div>
-    <div class="col-sm-4"> 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <img src="birds3.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+	<div class="col-lg-2">
+       <a class="btn btn-social btn-pinterest">
+			<span class="fa fa-google-plus"></span>+Google
+		</a>      
     </div>
+	<div class="col-lg-2">
+       <a class="btn btn-social btn-instagram">
+			<span class="fa fa-instagram"></span>Instagram
+		</a>      
+    </div>
+	<div class="col-lg-2">
+       <a class="btn btn-social  btn-github">
+			<span class="fa fa-github"></span>GitHub
+		</a>      
+    </div>
+	<div class="col-lg-2">
+       <a class="btn btn-social  btn-pinterest">
+			<span class="fa fa-pinterest"></span>Pinterest
+		</a>      
+    </div>
+    
   </div>
 </div>
 
 <!-- Footer -->
 <footer class="container-fluid bg-4 text-center">
-  
+  <div class="pull-left"><i class="glyphicon glyphicon-copyright-mark"></i>Copyright Akshayanand Raut </div>
 </footer>
 </div>
 
