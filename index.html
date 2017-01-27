@@ -51,8 +51,7 @@ $(document).ready(function() {
 } );
 
 $(document).ready(function(){
-	$('#olcoder').click(function(){
-	
+	$('#olcoder').click(function(){	
 	$('#myModal').modal('toggle');
 			$('.body1').hide("slow");
 			$('.nav').hide("slow");
@@ -64,6 +63,7 @@ $(document).ready(function(){
 	$('.navbar-brand').click(function(){	
 		$('.olcoder').hide("slow");		
 		$('.body1').show("slow");	
+		$('.nav').show("slow");
 			
 	});
 });
@@ -78,6 +78,9 @@ $(document).ready(function(){
 
 .body{
 opacity:0;
+}
+.navbar-brand:hover{
+cursor:pointer;
 }
   body {
       font: 20px Montserrat, sans-serif;
