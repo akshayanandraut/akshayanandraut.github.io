@@ -9,18 +9,20 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src='nprogress.js'></script>
+  <script src='res/js/nprogress.js'></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="bootstrap_social/bootstrap-social.css">
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/dataTables.bootstrap.min.css">
   <link rel="stylesheet" href="  https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
-  <link rel="stylesheet" href="bootstrap_social/bootstrap-social.css">
+  <link rel="stylesheet" href="res/bootstrap_social/bootstrap-social.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <script src="//code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.13/js/dataTables.bootstrap.min.js"></script>
-<link rel='stylesheet' href='nprogress.css'/>
-<link rel='stylesheet' href='css_req.css'/>
-<script src="js_req.js"></script> 
+<link rel='stylesheet' href='res/css/nprogress.css'/>
+<link rel='stylesheet' href='res/css/css_req.css'/>
+<script src="res/js/js_req.js"></script> 
  
   
 </head>
@@ -42,8 +44,8 @@
 		<div class="collapse navbar-collapse" id="myNavbar">
 		  <ul class="nav navbar-nav navbar-right">
 			<li><a href="#whoAmI" class="glyphicon glyphicon-king">WHO</a></li>
-			<li><a href="#whatAmI" class="	glyphicon glyphicon-question-sign glyphicon-white">WHAT</a></li>
-			<li><a href="#whereAmI" class="glyphicon glyphicon-globe">WHERE</a></li>
+			<li><a href="#whatAmI" class="	glyphicon glyphicon-question-sign glyphicon-white">MORE ABOUT ME</a></li>
+			<li><a href="#whereAmI" class="glyphicon glyphicon-globe">FIND ME</a></li>
 		  </ul>
 		</div>
 	  </div>
@@ -51,14 +53,16 @@
 	<div class="body1">
 	<!-- First Container -->
 	<div id="whoAmI" class="container-fluid bg-1 text-center">
-	  <h3 class="margin">Who Am I?</h3>
-	  <img src="me1.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
+	  <h3 class="margin">WHO AM I?</h3>
+	  <img src="res/images/me/me1.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
+	  <h3>I'm Akshayanand Raut</h3>
 	  <h3>I'm an Engineering enthusiast </h3>
+	  <h6><a class="btn btn-info" href="#whatAmI"><i class="glyphicon  glyphicon-chevron-down"></i>More about me</a></h6>
 	</div>
 
 	<!-- Second Container -->
 	<div id="whatAmI" class="container-fluid bg-2 text-center">
-	  <h3 class="margin">What Am I?</h3>
+	  <h3 class="margin">MORE ABOUT ME</h3>
 	  <p>I am an engineering student pursuing my Bachelor Of Engineering degree at Sardar Patel Institute of Technology.  </p>
 	  <p>I love working with UI/UX design. I have done many projects and will keep doing some many interesting stuffs whole my life. <br><br>Check out some of my works by clicking the button below.</p>
 	  
@@ -96,9 +100,10 @@
 
 	<!-- Third Container (Grid) -->
 	<div id="whereAmI" class="container-fluid bg-3 text-center">    
-	  <h3 class="margin">Where To Find Me?</h3><br>
-	  <div class="row">
-		<div class="col-lg-2">
+	  <h3 class="margin">WHERE TO FIND ME?</h3><br>
+	  <div class="container well well-lg">
+		<div class="row">
+		<div class="col-lg-2 col-lg-offset-1">
 		   <a class="btn btn-social btn-twitter">
 				<span class="fa fa-twitter"></span>Twitter
 			</a>      
@@ -109,13 +114,14 @@
 			</a>      
 		</div>
 		<div class="col-lg-2">
-		   <a class="btn btn-social btn-pinterest">
+		   <a class="btn btn-social btn-google">
 				<span class="fa fa-google-plus"></span>+Google
 			</a>      
 		</div>
+		
 		<div class="col-lg-2">
-		   <a class="btn btn-social btn-instagram">
-				<span class="fa fa-instagram"></span>Instagram
+		   <a class="btn btn-social  btn-linkedin">
+				<span class="fa fa-linkedin"></span>Linked
 			</a>      
 		</div>
 		<div class="col-lg-2">
@@ -123,14 +129,39 @@
 				<span class="fa fa-github"></span>GitHub
 			</a>      
 		</div>
+		</div>
+		<br>
+		<div class="row">
+		<div class="col-lg-2 col-lg-offset-1">
+		   <a class="btn btn-social btn-instagram">
+				<span class="fa fa-instagram"></span>Instagram
+			</a>      
+		</div>
 		<div class="col-lg-2">
 		   <a class="btn btn-social  btn-pinterest">
 				<span class="fa fa-pinterest"></span>Pinterest
 			</a>      
+		</div>	
+		
+		<div class="col-lg-2">
+		   <a class="btn btn-social  btn-medium">
+				<span class="fa fa-medium"></span>Medium
+			</a>      
+		</div>
+		<div class="col-lg-2">
+		   <a class="btn btn-social  btn-quora">
+				<span class="fa fa-quora"></span>Quora
+			</a>      
+		</div>
+		<div class="col-lg-2">
+		   <a class="btn btn-social  btn-youtube">
+				<span class="fa fa-youtube-play"></span>YouTube
+			</a>      
 		</div>
 		
 	  </div>
-	</div>
+	  </div>
+	
 	</div>
 	<div class="olcoder">
 

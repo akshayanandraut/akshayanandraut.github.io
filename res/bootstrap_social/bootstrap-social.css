@@ -145,3 +145,33 @@
 .btn-yahoo:active,.btn-yahoo.active,.open>.dropdown-toggle.btn-yahoo{background-image:none}
 .btn-yahoo.disabled:hover,.btn-yahoo[disabled]:hover,fieldset[disabled] .btn-yahoo:hover,.btn-yahoo.disabled:focus,.btn-yahoo[disabled]:focus,fieldset[disabled] .btn-yahoo:focus,.btn-yahoo.disabled.focus,.btn-yahoo[disabled].focus,fieldset[disabled] .btn-yahoo.focus{background-color:#720e9e;border-color:rgba(0,0,0,0.2)}
 .btn-yahoo .badge{color:#720e9e;background-color:#fff}
+
+
+
+
+.btn-medium{color:#fff;background-color:#02B875;border-color:rgba(0,0,0,0.2)}.btn-medium:focus,.btn-medium.focus{color:#fff;background-color:#01A865;border-color:rgba(0,0,0,0.2)}
+.btn-medium:hover{color:#fff;background-color:#01A865;border-color:rgba(0,0,0,0.2)}
+.btn-medium:active,.btn-medium.active,.open>.dropdown-toggle.btn-medium{color:#fff;background-color:#01A865;border-color:rgba(0,0,0,0.2)}.btn-medium:active:hover,.btn-medium.active:hover,.open>.dropdown-toggle.btn-medium:hover,.btn-medium:active:focus,.btn-medium.active:focus,.open>.dropdown-toggle.btn-medium:focus,.btn-medium:active.focus,.btn-medium.active.focus,.open>.dropdown-toggle.btn-medium.focus{color:#fff;background-color:#02A865;border-color:rgba(0,0,0,0.2)}
+.btn-medium:active,.btn-medium.active,.open>.dropdown-toggle.btn-medium{background-image:none}
+.btn-medium.disabled:hover,.btn-medium[disabled]:hover,fieldset[disabled] .btn-medium:hover,.btn-medium.disabled:focus,.btn-medium[disabled]:focus,fieldset[disabled] .btn-medium:focus,.btn-medium.disabled.focus,.btn-medium[disabled].focus,fieldset[disabled] .btn-medium.focus{background-color:#02B875;border-color:rgba(0,0,0,0.2)}
+.btn-medium .badge{color:#02B875;background-color:#fff}
+
+
+
+.btn-quora{color:#fff;background-color:#B92B27;border-color:rgba(0,0,0,0.2)}.btn-quora:focus,.btn-quora.focus{color:#fff;background-color:#c23321;border-color:rgba(0,0,0,0.2)}
+.btn-quora:hover{color:#fff;background-color:#c23321;border-color:rgba(0,0,0,0.2)}
+.btn-quora:active,.btn-quora.active,.open>.dropdown-toggle.btn-quora{color:#fff;background-color:#c23321;border-color:rgba(0,0,0,0.2)}.btn-quora:active:hover,.btn-quora.active:hover,.open>.dropdown-toggle.btn-quora:hover,.btn-quora:active:focus,.btn-quora.active:focus,.open>.dropdown-toggle.btn-quora:focus,.btn-quora:active.focus,.btn-quora.active.focus,.open>.dropdown-toggle.btn-quora.focus{color:#fff;background-color:#a32b1c;border-color:rgba(0,0,0,0.2)}
+.btn-quora:active,.btn-quora.active,.open>.dropdown-toggle.btn-quora{background-image:none}
+.btn-quora.disabled:hover,.btn-quora[disabled]:hover,fieldset[disabled] .btn-quora:hover,.btn-quora.disabled:focus,.btn-quora[disabled]:focus,fieldset[disabled] .btn-quora:focus,.btn-quora.disabled.focus,.btn-quora[disabled].focus,fieldset[disabled] .btn-quora.focus{background-color:#B92B27;border-color:rgba(0,0,0,0.2)}
+.btn-quora .badge{color:#B92B27;background-color:#fff}
+
+
+
+
+.btn-youtube{color:#fff;background-color:#E52C27;border-color:rgba(0,0,0,0.2)}.btn-youtube:focus,.btn-youtube.focus{color:#fff;background-color:#D11C17;border-color:rgba(0,0,0,0.2)}
+.btn-youtube:hover{color:#fff;background-color:#D11C17;border-color:rgba(0,0,0,0.2)}
+.btn-youtube:active,.btn-youtube.active,.open>.dropdown-toggle.btn-youtube{color:#fff;background-color:#D11C17;border-color:rgba(0,0,0,0.2)}.btn-youtube:active:hover,.btn-youtube.active:hover,.open>.dropdown-toggle.btn-youtube:hover,.btn-youtube:active:focus,.btn-youtube.active:focus,.open>.dropdown-toggle.btn-youtube:focus,.btn-youtube:active.focus,.btn-youtube.active.focus,.open>.dropdown-toggle.btn-youtube.focus{color:#fff;background-color:#C50C07;border-color:rgba(0,0,0,0.2)}
+.btn-youtube:active,.btn-youtube.active,.open>.dropdown-toggle.btn-youtube{background-image:none}
+.btn-youtube.disabled:hover,.btn-youtube[disabled]:hover,fieldset[disabled] .btn-youtube:hover,.btn-youtube.disabled:focus,.btn-youtube[disabled]:focus,fieldset[disabled] .btn-youtube:focus,.btn-youtube.disabled.focus,.btn-youtube[disabled].focus,fieldset[disabled] .btn-youtube.focus{background-color:#D11C17;border-color:rgba(0,0,0,0.2)}
+.btn-youtube .badge{color:#E52C27;background-color:#fff}
+
