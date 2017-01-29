@@ -4,9 +4,7 @@
 	height: 98%; 	
 	background: url('images/preloader/preLoader.gif') no-repeat center center;
 }
-body{
-z-index:-3;	
-}
+
 .body{
 opacity:0;
 }
@@ -17,6 +15,7 @@ cursor:pointer;
       font: 20px Montserrat, sans-serif;
       line-height: 1.5;
       color: #f5f6f7;
+	 z-index:-1;
   }
   p {font-size: 16px;}
   .margin {margin-bottom: 45px;}
@@ -95,18 +94,14 @@ cursor:pointer;
 color:black;
 }
 
-body {
-    scrollbar-3dlight-color:gold;
-    scrollbar-arrow-color:blue;
-    scrollbar-base-color:;
-    scrollbar-darkshadow-color:blue;
-    scrollbar-face-color:;
-    scrollbar-highlight-color:;
-    scrollbar-shadow-color:
-}
+
 .navbar {
     transition:padding height 1.2s;
     
+}
+
+.top-buffer{
+margin-top:15px;
 }
 
 .editor_textarea
@@ -115,23 +110,13 @@ body {
 }
 
 /*PAYTM TEXTBOX START*/
+/*
 
-.inputText, .inputPass
-{
-	height:30px;
-	border:0px;
-	outline: 0;
-	width:300px;
-	background:transparent;
-	border-bottom: 2px solid #00ffff;
-	font-family:"FORTE";
-	font-size:25px;
-}
 .username,.password
 {
+	z-index:2;
 	position:absolute;
-	float : left;
-	
+	float : left;	
 	font-size:25px;	
 	color:#a0a0a0;
 	transform : translate(-300px,0px);
@@ -141,16 +126,31 @@ body {
 	-o-transform : translate(-300px,0px);
 	transition-duration:0.7s;	
 }
-.username, .password{
-z-index:-1;	
+
+.inputText, .inputPass
+{
+	z-index:10;
+	height:30px;
+	border:0px;
+	outline: 0;
+	width:300px;
+	background:transparent;
+	border-bottom: 2px solid #00ffff;
+	font-family:"FORTE";
+	font-size:25px;
+	opacity:0.6;
+	
 }
-.username:hover inputText, .password:hover inputPass{
-z-index:1;	
+.username:hover ,.password:hover {
+	z-index:-1;
 }
 
-
-
-
+.username:hover  .inputText,.password:hover .inputPass{
+	z-index:3;
+}
+.inputPass:hover .password, .inputText:hover .username{
+z-index:2;
+}
 
 .inputText:focus + .username,  .inputPass:focus + .password
 {
@@ -167,5 +167,5 @@ z-index:1;
 	-ms-transform : translate(-300px,-25px) scale(0.8) translate(-15px,0px);
 	-moz-transform : translate(-300px,-25px) scale(0.8) translate(-15px,0px);
 	-o-transform : translate(-300px,-25px) scale(0.8) translate(-15px,0px);
-}
+}*/
 /*PAYTM TEXTBOX STOP*/

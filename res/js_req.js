@@ -4,6 +4,7 @@ $(document).ready(function() {
 	$('#loading').show();
 	$('.body').hide();	
 	$('.olcoder').hide();	
+//	$('.paytmTextBox').hide();	
 	
 });
 $(window).on('load',function() {	
@@ -31,12 +32,12 @@ $(document).ready(function(){
 			$('.nav').hide("slow");
 			$('.olcoder').show("slow");
 	});
-	$('#paytmTextBox').click(function(){		
+	/*$('#paytmTextBox').click(function(){		
 			$("#myModal .close").click();
 			$('.body1').hide("slow");
 			$('.nav').hide("slow");
 			$('.paytmTextBox').show("slow");
-	});
+	});*/
 });
 
 $(document).ready(function(){
@@ -64,7 +65,7 @@ function go_to_main()
 	}
 	else{
 		$('.olcoder').hide("slow");		
-		$('.paytmTextBox').hide("slow");		
+		//$('.paytmTextBox').hide("slow");		
 			$('.body1').show("slow");	
 			$('.nav').show("slow");
 	}
@@ -100,7 +101,7 @@ $(window).scroll(function () {
 
 
 //PAYTM TEXTBOX  START
-
+/*
 $(document).ready(function (){
 
 	$('.inputText').focusout(function(){
@@ -119,5 +120,5 @@ $(document).ready(function (){
 			$('.password').removeClass("anotherClass");
 	});
 });
-
+*/
 // PAYTM TEXTBOX END
