@@ -42,7 +42,7 @@
 		  <a class="navbar-brand">Me</a>
 		</div>
 		<div class="collapse navbar-collapse" id="myNavbar">
-		  <ul class="nav navbar-nav navbar-right">
+		  <ul class="nav nav-bar-nav-again navbar-nav navbar-right">
 			<li><a href="#whoAmI" class="glyphicon glyphicon-king">WHO</a></li>
 			<li><a href="#whatAmI" class="	glyphicon glyphicon-question-sign glyphicon-white">MORE ABOUT ME</a></li>
 			<li><a href="#whereAmI" class="glyphicon glyphicon-globe">FIND ME</a></li>
@@ -163,25 +163,77 @@
 	  </div>
 	
 	</div>
-	<div class="olcoder">
-
-		<div id="olcoder_work_area" class="container-fluid bg-2 text-center">
+	</div>
+	<div class="olcoder" class="container-fluid text-center" >
+	
+		<div id="olcoder_work_area" class="container-fluid bg-4 text-center">
 				  <h3 class="margin">OLCoder</h3>
-				  <div class="col-lg-2 col-lg-offset-8">
-					   <a class="btn btn-social  btn-github" href="#">
-							<span class="fa fa-github"></span>View code on GitHub
-						</a>      
-					</div>
-			<div class="container">
+				<a class="col-lg-2 btn btn-warning" onclick="go_to_main()"><span class="glyphicon glyphicon-chevron-left"></span>  Back</a>  
+					
+			<a class="btn btn-success col-lg-offset-6" onclick="olcoder_process()">
+							<span class="glyphicon glyphicon-chevron-right"></span>  RUN</a>  
+			<div class="col-lg-6">
+			  <label for="html">CODE</label>
+			 <!-- <textarea class="form-control editor_textarea"  id="editor_textarea" rows="15" id="html" onkeyup="olcoder_process()"></textarea>-->
+			 <div id="exTab2" class="container col-lg-12">	
+		<ul class="nav nav-tabs">
+			<li class="active">
+        <a  href="#1" data-toggle="tab">HTML</a>
+			</li>
+			<li><a href="#2" data-toggle="tab">CSS</a>
+			</li>
+			<li><a href="#3" data-toggle="tab">JS</a>
+			</li>
+		</ul>
 
+			<div class="tab-content ">
+			  <div class="tab-pane active" id="1">
+          <textarea class="form-control editor_textarea"  id="html_editor_textarea" rows="15" id="html" onkeyup="olcoder_process()"></textarea>
+				</div>
+				<div class="tab-pane" id="2">
+         <textarea class="form-control editor_textarea"  id="css_editor_textarea" rows="15" id="css" onkeyup="olcoder_process()"></textarea>
+				</div>
+        <div class="tab-pane" id="3">
+          <textarea class="form-control editor_textarea"  id="js_editor_textarea" rows="15" id="js" onkeyup="olcoder_process()"></textarea>
+				</div>
+			</div>
+  </div>
+			</div>	
+			
+
+
+
+			<script>	
+				function olcoder_process()
+				{
+				
+				var html_final_text = '<!DOCTYPE html><html><head><style>'+document.getElementByid('css_editor_textarea').value +'</style><script>'+document.getElementByid('js_editor_textarea').value +'</script></head><body>'+document.getElementByid('html_editor_textarea').value+'</body></html>';
+				var iframeDoc = myIframe.contentWindow.document;
+iframeDoc.open();
+iframeDoc.write(html_final_text);
+iframeDoc.close();
+				}
+			</script>			
+			<!-- OUTPUT IFRAME-->
+			
+			<div class="col-lg-6" rows="15">
+			  <label for="js">OUTPUT</label>
+			  <div class="form-control olcoder_output wrapper-container wrapper text-left" id="olcoder_output" rows="15" style="height: 300px;overflow-y: scroll;overflow-x: hidden;"><iframe class="wrapper-container wrapper" id="olcoder_output_iframe"> </iframe></div>
+			</div>
+			<br>
+			 			
 						
 						
 						
 						
 						
-						
-			</div>			
+					
 		</div>
+		<div class="col-lg-2 col-lg-offset-2">
+					   <a class="btn btn-danger" href="projects/olcoder/olcoder.html" download="olcoder.html">
+							<span class="fa fa-download"></span> Download your code
+						</a>      
+			</div>
 	</div>
 	
 <!-- Footer -->

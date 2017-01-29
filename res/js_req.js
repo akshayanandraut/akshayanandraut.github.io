@@ -26,7 +26,7 @@ $(document).ready(function() {
 
 $(document).ready(function(){
 	$('#olcoder').click(function(){		
-	$("#myModal .close").click();
+			$("#myModal .close").click();
 			$('.body1').hide("slow");
 			$('.nav').hide("slow");
 			$('.olcoder').show("slow");
