@@ -4,7 +4,9 @@
 	height: 98%; 	
 	background: url('images/preloader/preLoader.gif') no-repeat center center;
 }
-
+body{
+z-index:-3;	
+}
 .body{
 opacity:0;
 }
@@ -129,7 +131,7 @@ body {
 {
 	position:absolute;
 	float : left;
-		
+	
 	font-size:25px;	
 	color:#a0a0a0;
 	transform : translate(-300px,0px);
@@ -139,6 +141,16 @@ body {
 	-o-transform : translate(-300px,0px);
 	transition-duration:0.7s;	
 }
+.username, .password{
+z-index:-1;	
+}
+.username:hover inputText, .password:hover inputPass{
+z-index:1;	
+}
+
+
+
+
 
 .inputText:focus + .username,  .inputPass:focus + .password
 {

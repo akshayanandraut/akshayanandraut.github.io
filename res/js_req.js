@@ -62,6 +62,12 @@ function go_to_main()
 		   changeFlag=false;
 		}
 	}
+	else{
+		$('.olcoder').hide("slow");		
+		$('.paytmTextBox').hide("slow");		
+			$('.body1').show("slow");	
+			$('.nav').show("slow");
+	}
 		
 	
 }
