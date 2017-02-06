@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 #CURRENCY CONVERTOR
 
 ##Documentation 
