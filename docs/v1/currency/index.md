@@ -1,6 +1,4 @@
----
-layout: default
----
+
 
 #CURRENCY CONVERTOR
 
