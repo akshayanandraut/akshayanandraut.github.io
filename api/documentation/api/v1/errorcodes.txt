@@ -1,8 +1,0 @@
-ERROR NO. 		DESCRIPTION
-001		-		This error occurs because one of the required parameters(from, to and amount) is not provided with the call. Please check the documentation for proper api call.
-
-002 	-		This error occurs because the from and to currency parameters are the same. 
-						
-003		-		This error occurs because the from parameter is invalid. Please check the currency codes in the documentation for valid currency codes.
- 						
-004 	-		This error occurs because the from and to currency parameters are the same. 						
