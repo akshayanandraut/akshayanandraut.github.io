@@ -2,7 +2,7 @@
     position: absolute; 
 	width: 99%; 
 	height: 98%; 	
-	background: url('images/preloader/preLoader.gif') no-repeat center center;
+	background: url('images/preloader/preLoader.gif') no-repeat center center fixed;
 }
 
 .body{
