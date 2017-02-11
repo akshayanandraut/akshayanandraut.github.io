@@ -90,9 +90,7 @@ cursor:pointer;
       line-height: 1.5;
       color: #f5f6f7;
 }
-.olcoder{
-color:black;
-}
+
 
 
 .navbar {
@@ -108,64 +106,3 @@ margin-top:15px;
 {
 	resize:none;
 }
-
-/*PAYTM TEXTBOX START*/
-/*
-
-.username,.password
-{
-	z-index:2;
-	position:absolute;
-	float : left;	
-	font-size:25px;	
-	color:#a0a0a0;
-	transform : translate(-300px,0px);
-	-webkit-transform : translate(-300px,0px);
-	-moz-transform : translate(-300px,0px);
-	-ms-transform : translate(-300px,0px);
-	-o-transform : translate(-300px,0px);
-	transition-duration:0.7s;	
-}
-
-.inputText, .inputPass
-{
-	z-index:10;
-	height:30px;
-	border:0px;
-	outline: 0;
-	width:300px;
-	background:transparent;
-	border-bottom: 2px solid #00ffff;
-	font-family:"FORTE";
-	font-size:25px;
-	opacity:0.6;
-	
-}
-.username:hover ,.password:hover {
-	z-index:-1;
-}
-
-.username:hover  .inputText,.password:hover .inputPass{
-	z-index:3;
-}
-.inputPass:hover .password, .inputText:hover .username{
-z-index:2;
-}
-
-.inputText:focus + .username,  .inputPass:focus + .password
-{
-	transform : translate(-300px,-25px) scale(0.8) translate(-15px,0px);
-	-webkit-transform : translate(-300px,-25px) scale(0.8) translate(-15px,0px);
-	-moz-transform : translate(-300px,-25px) scale(0.5);
-	-o-transform : translate(-300px,-25px) scale(0.5);
-	-ms-transform : translate(-300px,-25px) scale(0.5);
-	transition-duration:0.7s;		
-}
-.anotherClass{
-	transform : translate(-300px,-25px) scale(0.8) translate(-15px,0px);
-	-webkit-transform : translate(-300px,-25px) scale(0.8) translate(-15px,0px);
-	-ms-transform : translate(-300px,-25px) scale(0.8) translate(-15px,0px);
-	-moz-transform : translate(-300px,-25px) scale(0.8) translate(-15px,0px);
-	-o-transform : translate(-300px,-25px) scale(0.8) translate(-15px,0px);
-}*/
-/*PAYTM TEXTBOX STOP*/
