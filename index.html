@@ -19,7 +19,7 @@
 	<link rel='stylesheet' href='res/nprogress.css'/>
 	
 	<script src='res/nprogress.js'></script>
-	
+	<script src='res/js_req.js'></script>
 	<script src="//code.jquery.com/jquery-1.12.4.js"></script>
 	<script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
 	<script src="https://cdn.datatables.net/1.10.13/js/dataTables.bootstrap.min.js"></script>
@@ -27,6 +27,111 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
+<style>
+ #loading {
+    position: absolute; 
+	width: 99%; 
+	height: 98%; 	
+	background: url('images/preloader/preLoader.gif') no-repeat center center;
+}
+
+.body{
+	opacity:0;
+}
+.navbar-brand:hover{
+	cursor:pointer;
+}
+body {
+    font: 20px Montserrat, sans-serif;
+    line-height: 1.5;
+    color: #f5f6f7;
+	z-index:-1;
+}
+p{
+	font-size: 16px;
+}
+.margin {margin-bottom: 45px;}
+.bg-1 { 
+    background-color: #1abc9c; /* Green */
+    color: #ffffff;
+}
+.bg-2 { 
+    background-color: #474e5d; /* Dark Blue */
+    color: #ffffff;
+}
+.bg-3 { 
+    background-color: #ffffff; /* White */
+    color: #555555;
+}
+.bg-4 { 
+    background-color: #2f2f2f; /* Black Gray */
+    color: #fff;
+}
+.container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.navbar {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 13px;
+    letter-spacing: 4px;
+	opacity:0.98;
+	background:#F2F7F6;	  	  
+}
+.navbar-nav  li a:hover {
+    color: #1abc9c !important;
+	  
+}
+.collapse{
+    background:#F2F7F6;	
+}
+.navbar-nav  li a{
+	opacity:0.8;
+	margin-right:20px; 
+	word-spacing:-10px;
+}
+.nav-bar-nav-again{
+   // Animation
+   -webkit-transition: all 0.4s ease;
+   transition: all 0.4s ease;
+}
+
+.glyphicon-white{
+	color:white;
+}
+
+.table, tr{
+	color:black;
+}
+
+.proj-list{
+	text-decoration: none;
+	cursor:pointer;
+}
+
+.body1{
+	font: 20px Montserrat, sans-serif;
+    line-height: 1.5;
+    color: #f5f6f7;
+}
+
+.navbar {
+    transition:padding height 1.2s;
+}
+
+.top-buffer{
+	margin-top:15px;
+}
+
+.editor_textarea{
+	resize:none;
+}
+
+</style>
 	
 
 
@@ -188,152 +293,6 @@
 	 <div class="pull-left">Copyright <i class="glyphicon glyphicon-copyright-mark"></i>2017 Akshayanand Raut </div>
 </footer>
 </div>
-<script>  
-$(document).ready(function() {	
-	NProgress.start();
-	$('#loading').show();
-	$('.body').hide();			
-});
-$(window).on('load',function() {	
-	
-	$('#loading').hide();
-	$('.body').show().animate({opacity:1}, 100);
-	NProgress.done();
-});
 
-$(window).scroll(function() {
-  if ($(document).scrollTop() > 50) {
-    $('nav').addClass('shrink');
-  } else {
-    $('nav').removeClass('shrink');
-  }
-});
-
-$(document).ready(function() {
-    $('#projects_table').DataTable();
-} );
-
-$(window).scroll(function () {
-    var scrollh = $(this).scrollTop();
-    if (scrollh == 0) {
-        $(".navbar").css({
-            'height':'75px',
-			'padding-top':'10px',
-            'padding-bottom':'10px',			
-        });
-    } else {
-        $(".navbar").css({
-            'height':'35px', 
-			'padding-top':'0px',
-            'padding-bottom':'4px',			
-        });	
-    }
-});
-</script>
-<style>
- #loading {
-    position: absolute; 
-	width: 99%; 
-	height: 98%; 	
-	background: url('images/preloader/preLoader.gif') no-repeat center center;
-}
-
-.body{
-	opacity:0;
-}
-.navbar-brand:hover{
-	cursor:pointer;
-}
-body {
-    font: 20px Montserrat, sans-serif;
-    line-height: 1.5;
-    color: #f5f6f7;
-	z-index:-1;
-}
-p{
-	font-size: 16px;
-}
-.margin {margin-bottom: 45px;}
-.bg-1 { 
-    background-color: #1abc9c; /* Green */
-    color: #ffffff;
-}
-.bg-2 { 
-    background-color: #474e5d; /* Dark Blue */
-    color: #ffffff;
-}
-.bg-3 { 
-    background-color: #ffffff; /* White */
-    color: #555555;
-}
-.bg-4 { 
-    background-color: #2f2f2f; /* Black Gray */
-    color: #fff;
-}
-.container-fluid {
-    padding-top: 70px;
-    padding-bottom: 70px;
-}
-.navbar {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border: 0;
-    border-radius: 0;
-    margin-bottom: 0;
-    font-size: 13px;
-    letter-spacing: 4px;
-	opacity:0.98;
-	background:#F2F7F6;	  	  
-}
-.navbar-nav  li a:hover {
-    color: #1abc9c !important;
-	  
-}
-.collapse{
-    background:#F2F7F6;	
-}
-.navbar-nav  li a{
-	opacity:0.8;
-	margin-right:20px; 
-	word-spacing:-10px;
-}
-.nav-bar-nav-again{
-   // Animation
-   -webkit-transition: all 0.4s ease;
-   transition: all 0.4s ease;
-}
-
-.glyphicon-white{
-	color:white;
-}
-
-.table, tr{
-	color:black;
-}
-
-.proj-list{
-	text-decoration: none;
-	cursor:pointer;
-}
-
-.body1{
-	font: 20px Montserrat, sans-serif;
-    line-height: 1.5;
-    color: #f5f6f7;
-}
-
-.navbar {
-    transition:padding height 1.2s;
-}
-
-.top-buffer{
-	margin-top:15px;
-}
-
-.editor_textarea{
-	resize:none;
-}
-
-</style>
 </body>
 </html>

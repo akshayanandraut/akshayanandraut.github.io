@@ -41,29 +41,3 @@ $(window).scroll(function () {
         });	
     }
 });
-
-
-
-
-//PAYTM TEXTBOX  START
-/*
-$(document).ready(function (){
-
-	$('.inputText').focusout(function(){
-		if($(this).val() != ""){	
-			$('.username').addClass("anotherClass");		
-		}
-		else
-			$('.username').removeClass("anotherClass");
-	});
-	
-	$('.inputPass').focusout(function(){
-		if($(this).val() != ""){	
-			$('.password').addClass("anotherClass");		
-		}
-		else
-			$('.password').removeClass("anotherClass");
-	});
-});
-*/
-// PAYTM TEXTBOX END
