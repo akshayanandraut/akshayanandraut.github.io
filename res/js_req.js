@@ -2,12 +2,13 @@
 $(document).ready(function() {	
 	NProgress.start();
 	$('#loading').show();
-	$('.body').hide();			
+	$('.body').hide();	
+	
 });
 $(window).on('load',function() {	
 	
 	$('#loading').hide();
-	$('.body').show().animate({opacity:1}, 100);
+	$('.body').show().animate({opacity:1}, 1000);
 	NProgress.done();
 });
 
@@ -22,6 +23,7 @@ $(window).scroll(function() {
 $(document).ready(function() {
     $('#projects_table').DataTable();
 } );
+
 
 $(window).scroll(function () {
     var scrollh = $(this).scrollTop();
@@ -43,3 +45,25 @@ $(window).scroll(function () {
 
 
 
+//PAYTM TEXTBOX  START
+/*
+$(document).ready(function (){
+
+	$('.inputText').focusout(function(){
+		if($(this).val() != ""){	
+			$('.username').addClass("anotherClass");		
+		}
+		else
+			$('.username').removeClass("anotherClass");
+	});
+	
+	$('.inputPass').focusout(function(){
+		if($(this).val() != ""){	
+			$('.password').addClass("anotherClass");		
+		}
+		else
+			$('.password').removeClass("anotherClass");
+	});
+});
+*/
+// PAYTM TEXTBOX END
