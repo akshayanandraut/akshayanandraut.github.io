@@ -1,6 +1,6 @@
   
 $(document).ready(function() {	
-	NProgress.start();
+	//NProgress.start();
 	//$('#loading').show();
 	$('.body').hide();	
 });
@@ -8,7 +8,7 @@ $(window).on('load',function() {
 	
 	//$('#loading').hide();
 	$('.body').show().animate({opacity:1}, 200);
-	NProgress.done();
+	//NProgress.done();
 });
 
 $(window).scroll(function() {
