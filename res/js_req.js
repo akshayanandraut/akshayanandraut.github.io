@@ -1,9 +1,9 @@
   
 $(document).ready(function() {	
-	$('.body').hide();	
+	//$('.body').hide();	
 });
 $(window).on('load',function() {	
-	$('.body').show().animate({opacity:1}, 100);	
+	//$('.body').show().animate({opacity:1}, 100);	
 });
 
 $(window).scroll(function() {
