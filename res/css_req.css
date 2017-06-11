@@ -3,61 +3,62 @@
 .navbar-brand:hover{
 cursor:pointer;
 }
-  body {
-      font: 20px Montserrat, sans-serif;
-      line-height: 1.5;
-      color: #f5f6f7;
-	 z-index:-1;
-  }
-  p {font-size: 16px;}
-  .margin {margin-bottom: 45px;}
-  .bg-1 { 
-      background-color: #008B8B; /* Green */
-      color: #ffffff;
-  }
-  .bg-2 { 
-      background-color: #474e5d; /* Dark Blue */
-      color: #ffffff;
-  }
-  .bg-3 { 
-      background-color: #ffffff; /* White */
-      color: #555555;
-  }
-  .bg-4 { 
-      background-color: #2f2f2f; /* Black Gray */
-      color: #fff;
-  }
-  .container-fluid {
-      padding-top: 70px;
-      padding-bottom: 70px;
-  }
-  .navbar {
-      padding-top: 10px;
-      padding-bottom: 10px;
-      border: 0;
-      border-radius: 0;
-      margin-bottom: 0;
-      font-size: 13px;
-      letter-spacing: 4px;
-	  opacity:0.98;
-	  background:#F2F7F6;	  	  
-  }
-  .navbar-nav  li a:hover {
-      color: #1abc9c !important;
-	  
-  }
-  .collapse{
-    background:#F2F7F6;	
-  }
-  .navbar-nav  li a{
-	opacity:0.8;
-	margin-right:20px; 
-	word-spacing:-10px;
-	
-  }
- .social-btn{
-   margin:15px;
- }
+body {
+    font: 20px Montserrat, sans-serif;
+    line-height: 1.5;
+    color: #f5f6f7;
+  z-index:-1;
+}
+p {font-size: 16px;}
+.margin {margin-bottom: 45px;}
+.bg-1 { 
+    background-color: #008B8B; /* Green */
+    color: #ffffff;
+}
+.bg-2 { 
+    background-color: #474e5d; /* Dark Blue */
+    color: #ffffff;
+}
+.bg-3 { 
+    background-color: #ffffff; /* White */
+    color: #555555;
+}
+.bg-4 { 
+    background-color: #2f2f2f; /* Black Gray */
+    color: #fff;
+}
+.container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.navbar {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 13px;
+    letter-spacing: 4px;
+  opacity:0.98;
+  background:#F2F7F6;	  	  
+}
+.navbar-nav  li a:hover {
+    color: #1abc9c !important;
+  
+}
+.collapse{
+  background:#F2F7F6;	
+}
+.navbar-nav  li a{
+  opacity:0.8;
+  margin-right:20px; 
+  word-spacing:-10px;
+
+}
+.social-btn{
+  margin-top:15px;
+  margin-bottom:15px;
+}
 
 
 
