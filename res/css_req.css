@@ -61,7 +61,7 @@ p {font-size: 16px;}
 
 #otherTalentsButton:hover{
   cursor: pointer;
-
+  text-shadow: 10px 10px 3px #ffffff;
 }
 
 .nav-bar-nav-again{
