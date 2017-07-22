@@ -23,9 +23,21 @@ p {font-size: 16px;}
     background-color: #ffffff; /* White */
     color: #555555;
 }
-.bg-4 { 
+.bg-4 {
     background-color: #2f2f2f; /* Black Gray */
     color: #fff;
+}
+.bg-5 {
+    background-color: #444444;
+    color: #fff;
+}
+.bg-6 {
+    background-color: #222222;
+    color: #fff;
+}
+.moreaboutme:hover{
+    box-shadow: 0px 0px 10px #ffffff;
+    background: #afafaf;
 }
 .container-fluid {
     padding-top: 70px;
@@ -43,7 +55,9 @@ p {font-size: 16px;}
   background:#0f0f0f;
 }
 .navbar-nav  li a:hover {
-    color: #0f0f0f !important;
+    color: #ffffff !important;
+    text-shadow: 0px 0px 15px #ffffff;
+    transition: color 0.3s;
 
 }
 .collapse{
