@@ -50,42 +50,138 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>                        
 		  </button>
-		  <a class="navbar-brand">AR</a>
+		  <a href="#top" class="navbar-brand">AR</a>
 		</div>
 		<div class="collapse navbar-collapse" id="myNavbar">
 		  <ul class="nav nav-bar-nav-again navbar-nav navbar-right">
 			<li><a href="#whoAmI" class="glyphicon glyphicon-king">WHO</a></li>
-			<li><a href="#moreAboutMe" class="	glyphicon glyphicon-question-sign glyphicon-white">ABOUT ME</a></li>
-			<li><a href="#findMe" class="glyphicon glyphicon-globe">FIND ME</a></li>
+			<li><a href="#moreAboutMe" class="	glyphicon glyphicon-question-sign glyphicon-white">ABOUT</a></li>
+			<li><a href="#findMe" class="glyphicon glyphicon-globe">FIND</a></li>
 		  </ul>
 		</div>
 	  </div>
 	</nav>
 	<div class="body1">
+        <button onclick="topFunction()" id="backToTop" title="Go to top"><i class="glyphicon glyphicon-arrow-up"></i></button>
 
 	<div id="whoAmI" class="container-fluid bg-5 text-center">
 	  <h3 class="margin"> </h3>
 	  <img src="res/images/me/me1.jpg" class="img-responsive img-circle margin" style="display:inline; box-shadow: 0px 0px 100px #ffffff"    alt="Akshayanand Raut" width="350" height="350">
+
+
+
 	  <h3>Akshayanand Raut</h3>
 	  <h3>Engineering enthusiast </h3>
 	  <h6><a class="btn btn-default moreaboutme" href="#moreAboutMe" style="color:#a0a0a0; background:#444444" ><i class="glyphicon  glyphicon-chevron-down"></i>More about me</a></h6>
+        <h4>
+            <br />
+            <br />
+        <div class="row">
+            <a href="https://github.com/akshayanandraut?tab=repositories" target="_blank" ><span class="label label-default">Repositories</span><span class="label label-info" id="totalGitRepos">10</span></a>
+            <a id="followersTooptip" href="https://github.com/akshayanandraut?tab=followers" data-toggle="tooltip" target="_blank" ><span class="label label-default">Followers</span><span class="label label-warning" id="totalGitFollowers">1</span></a>
+
+
+
+            <script>
+                var numberOfGitRepos=0;
+                var numberOfGitFollowers=0;
+                $(document).ready(function(){
+                    $('[data-toggle="tooltip"]').tooltip();
+                });
+                var xhttp = new XMLHttpRequest();
+
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var json = JSON.parse(this.responseText);
+                        //document.getElementById('totalGitRepos').innerHTML = json.length;
+                        numberOfGitRepos = json.length;
+                    }
+                };
+                xhttp.open("GET", "https://api.github.com/users/akshayanandraut/repos", false);
+                xhttp.send();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var json = JSON.parse(this.responseText);
+                        //document.getElementById('totalGitFollowers').innerHTML = "1";
+                        var followers="";
+                        numberOfGitFollowers = json.length;
+                        for(var i =0; i<json.length && i<7; i++){
+                            document.getElementById('totalGitFollowers').innerHTML = i;
+                            var p = new XMLHttpRequest();
+                                p.onreadystatechange = function() {
+                                    if (this.readyState == 4 && this.status == 200) {
+                                        var json1 = JSON.parse(this.responseText);
+                                        if(json1.name != null)
+                                            followers +=json1.name
+                                        else
+                                            followers +=json1.login;
+                                    }
+                                };
+                                p.open("GET",json[i].url , false);
+                                p.send();
+                                if(i==7 || i==json.length-1)
+                                    followers += "";
+                                else
+                                    followers += ", ";
+                        }
+                        if(json.length>7)
+                            followers+="...";
+                        document.getElementById('followersTooptip').title = followers;
+                        document.getElementById('totalGitFollowers').innerHTML = json.length;
+
+
+                    }
+                };
+                xhttp.open("GET", "https://api.github.com/users/akshayanandraut/followers", true);
+                xhttp.send();
+
+                var i1 = 1;
+                theLabel1 = document.getElementById("totalGitFollowers");
+                var interval1 = setInterval(function(){
+                        if (i1 == numberOfGitFollowers) clearInterval(interval1);
+                        theLabel1.innerHTML = i1;
+                        i1++;
+                    },
+                    100);
+
+                var j1 = 1;
+                theLabel2 = document.getElementById("totalGitRepos");
+                var interval2 = setInterval(function(){
+                        if (j1 == numberOfGitRepos) clearInterval(interval2);
+                        theLabel2.innerHTML = j1;
+                        j1++;
+                    },
+                    100);
+
+            </script>
+
+        </div>
+        </h4>
+
 	</div>
 
 	
 	<div id="moreAboutMe" class="container-fluid bg-6 text-center">
-	  <h3 class="margin">ABOUT ME</h3>
+        <h3 class="margin">ABOUT ME</h3>
+        <br />
+        <br />
 	  <p>I am pursuing my Bachelor of Engineering degree at Sardar Patel Institute of Technology, Andheri  </p>
 	  <p>Technology? ... I'm Lovin' it <i class="glyphicon glyphicon-heart "></i></p>
 	  <p>My goal is TechOE (Technology Oriented Everything) </p>
 	  <p>Working with UI/UX design interests me </p>
 	  <p>I have done many projects and will keep doing some many interesting stuffs whole my life</p> 
-	  <br><br>
+	  <br />
+        <br />
+        <br />
 	  <p>Check out some of my projects and work by clicking the button below.</p>
 	  
-	  
+	  <br />
+	  <br />
 	<button type="button" class="btn btn-info btn-lg myProjects" data-toggle="modal" style="background:#7f7f7f;border:none" data-target="#myModal"><span class="glyphicon glyphicon-briefcase"></span> My Projects</button>
+        <br />
+        <br />
+        <br />
 
-	
 	<div id="myModal" class="modal fade" role="dialog">
 	  <div class="modal-dialog">
 
@@ -136,8 +232,14 @@
 	</div>
 
 	<div id="findMe" class="container-fluid bg-5 text-center">
-	  <h3 class="margin">WHERE TO FIND ME?</h3><br><br>
+	  <h3 class="margin">WHERE TO FIND ME?</h3>
+        <br />
+        <br />
+        <br />
 	  <h4 class="margin">Follow me on ...</h4>
+        <br />
+        <br />
+        <br />
 	  <div class="container well well-lg text-center" style="background:#4f4f4f; border:none; box-shadow:0px 0px 20px #ffffff">
 		<div class="social-btn col-lg-4 col-md-4 col-sm-6 col-sx-12">
 		   <a class="btn btn-social btn-twitter" target="_blank" href="https://twitter.com/AkshayanandR">
@@ -179,6 +281,10 @@
 				<span class="fa fa-github"></span>GitHub</a>
 		</div>
 	</div>
+        <br />
+        <br />
+        <br />
+
     </div>
 	</div>
 <footer class="container-fluid bg-6 text-center">
