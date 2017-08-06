@@ -132,7 +132,8 @@ color:black;
 
 
 .navbar {
-    transition:padding 1.2s, height 1.2s;
+    transition:padding 1.2s ;
+    transition: height 1.2s;
     
 }
 
