@@ -105,23 +105,18 @@ xhttp.open("GET", "https://api.github.com/users/akshayanandraut/followers", true
 xhttp.send();
 
 var i1 = 1;
-theLabel1 = document.getElementById("totalGitFollowers");
 var interval1 = setInterval(function(){
         if (i1 == numberOfGitFollowers) clearInterval(interval1);
-        theLabel1.innerHTML = i1;
+    document.getElementById("totalGitFollowers").innerHTML = i1;
         i1++;
-    },
-    100);
+    }, 100);
 
 var j1 = 1;
-theLabel2 = document.getElementById("totalGitRepos");
 var interval2 = setInterval(function(){
         if (j1 == numberOfGitRepos) clearInterval(interval2);
-        theLabel2.innerHTML = j1;
+    document.getElementById("totalGitRepos").innerHTML = j1;
         j1++;
-    },
-    100);
-
+    }, 100);
 /*Followers and repos end*/
 
 
