@@ -112,14 +112,16 @@
                                     if (this.readyState == 4 && this.status == 200) {
                                         var json1 = JSON.parse(this.responseText);
                                         if(json1.name != null)
-                                            followers +=json1.name
+                                            followers +=json1.name;
                                         else
                                             followers +=json1.login;
                                     }
                                 };
                                 p.open("GET",json[i].url , false);
                                 p.send();
-                                if(i==10 || i==json.length-1)
+                                if(i==json.length-2)
+                                    followers+= " and ";
+								else if(i==10 || i==json.length-1)
                                     followers += "";
                                 else
                                     followers += ", ";
