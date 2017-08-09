@@ -20,3 +20,14 @@
     ExpiresByType application/x-icon "access plus 1 month"
 
 </IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(js|css|xml|gz)$">
+      Header append Vary: Accept-Encoding
+  </FilesMatch>
+
+  <FilesMatch "https://api.github.com/$">
+      Header append Vary: Accept-Encoding
+  </FilesMatch>
+</IfModule>
+
