@@ -1,9 +1,4 @@
 # Akshayanand Raut
 
 
-# <button onclick="loadPage()" value="Check out"></button>
-<script>
-function loadPage(){
-$window.open("https://akshayanandraut.github.io", "_blank");
-}
-</script>
+# <button onclick="https://akshayanandraut.github.io" value="Check out"></button>
