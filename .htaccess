@@ -2,7 +2,7 @@
 	ExpiresActive On
     ExpiresDefault "access plus 1 month"
     ExpiresByType text/css "access plus 1 month"
-    ExpiresByType text/js "access plus 1 month"
+    ExpiresByType text/js "access plus 1 minute"
     ExpiresByType text/ico "access plus 1 month"
     ExpiresByType text/plain "access plus 1 month"
     ExpiresByType image/gif "access plus 1 month"
