@@ -147,6 +147,7 @@ margin-top:15px;
 }
 
 .mypic{
+    display: inline;
     animation-duration: 4s;
     animation-name: flashything;
     animation-iteration-count: infinite;
